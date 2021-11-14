@@ -73,6 +73,7 @@ jobs:
         shell: bash
       - name: before-script
         env:
+          DB_PORT: ${{ job.services.mysql.ports[3306] }}
           PATH: "/usr/lib/ccache:$HOME/miniconda/bin:$PATH"
         run: |
           mysql -e "CREATE DATABASE test;"
