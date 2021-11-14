@@ -35,7 +35,7 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: | 
             ${{ runner.os }}-pip-
-      -name: Install-apt-packages
+      - name: Install-apt-packages
         run: |
           sudo apt-get -y install libevent-dev
           sudo apt-get -y install libboost-test-dev
