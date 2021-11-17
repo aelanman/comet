@@ -37,10 +37,10 @@ from . import __version__
 from .manager import Manager, TIMESTAMP_FORMAT
 from .exception import CometError, DatasetNotFoundError, StateNotFoundError
 
-REDIS_PORT = os.environ['REDIS_PORT']
-REDIS_HOST = os.environ['REDIS_HOST']
-REQUESTED_STATE_TIMEOUT = 35
 DEFAULT_PORT = 12050
+REDIS_PORT = os.environ.get('REDIS_PORT', 6379)
+REDIS_HOST = os.environ.get('REDIS_HOST', 'localhost')
+REQUESTED_STATE_TIMEOUT = 35
 REDIS_SERVER = (REDIS_HOST, REDIS_PORT)
 
 # config variable
