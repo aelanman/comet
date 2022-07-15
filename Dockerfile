@@ -16,7 +16,7 @@ RUN apt-get update && \
     apt-get install -y curl && \
     apt-get install -y build-essential && \
     apt-get install -y libmariadb-dev && \
-    git clone --branch vs/comet https://github.com/aelanman/comet.git && \
+    git clone --branch ael/fixjson https://github.com/aelanman/comet.git && \
     pip install -r /comet/requirements.txt && \
     pip install /comet && \
     #-----------------------

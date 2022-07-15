@@ -47,7 +47,7 @@ REDIS_SERVER = (REDIS_HOST, REDIS_PORT)
 # config variable
 wait_time = None
 
-app = Sanic(__name__)
+app = Sanic("comet_broker")
 app.config.REQUEST_TIMEOUT = 120
 app.config.RESPONSE_TIMEOUT = 120
 
